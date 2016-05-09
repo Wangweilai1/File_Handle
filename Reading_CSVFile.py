@@ -31,9 +31,9 @@ class BatchProcessCSV:
 
     def __init__(self,inputfolder="c:\\input\\",outputfolder="c:\\output\\"):
 
-        self.inputfolder=inputfolder
+        self.inputfolder = inputfolder
 
-        self.outputfolder=outputfolder
+        self.outputfolder = outputfolder
 
     #批处理
 
@@ -42,8 +42,8 @@ class BatchProcessCSV:
 
         print("开始处理...")
         if (os.path.exists(self.outputfolder)==False):
-            pass
-            #os.makedirs(self.outputfolder)
+            
+            os.makedirs(self.outputfolder)
 
         list_dirs = os.walk(self.inputfolder)
         for root, dirs, files  in list_dirs:
@@ -98,7 +98,7 @@ class BatchProcessCSV:
 
         for row in reader:
 
-            lenth=len(row)
+            lenth = len(row)
 
             if lenth>10:
 
